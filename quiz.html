@@ -415,7 +415,7 @@ retryButton.addEventListener("click", function() {
 });
 
 continueButton.addEventListener("click", function() {
-    window.location.href = "./surprise.html";
+    window.parent.postMessage("surprise", "*");
 });
 </script>
 
