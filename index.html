@@ -89,9 +89,11 @@
         });
 
         // Heart click: open common music player
-        openHeart.addEventListener("click", function () {
-            window.location.href = "music-player.html";
-        });
+        
+openHeart.addEventListener("click", function () {
+    window.parent.postMessage("letter", "*");
+});
+
     </script>
 
 </body>
