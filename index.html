@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy 1st Love Anniversary ❤️</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div id="hearts"></div>
+
+    <!-- Music Button -->
+    <button class="music-btn" id="musicBtn">🎵</button>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="../music/Anbil%20Avan.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Welcome -->
+    <div class="welcome">
+        <h3>Made With Love ❤️</h3>
+
+        <h1>Happy 1st Love Anniversary</h1>
+
+        <p>
+            Every heartbeat reminds me of you.<br>
+            Click the heart and open my surprise...
+        </p>
+    </div>
+
+    <!-- Envelope -->
+    <div class="envelope" id="envelope">
+
+        <div class="envelope-back"></div>
+
+        <div class="envelope-letter">
+            <h2>💖 Hii Meow 💖</h2>
+
+            <p>
+                I have something very special for you... ❤️
+                <br><br>
+                Touch my heart and let's relive our beautiful memories together.
+            </p>
+        </div>
+
+        <div class="flap"></div>
+
+        <div class="heart" id="openHeart">❤️</div>
+
+    </div>
+
+    <div class="bottom-text">
+        Click the Heart to Open Our Love Story ❤️
+    </div>
+
+    <!-- Existing JS -->
+    <script src="../js/script.js"></script>
+
+    <script>
+        const music = document.getElementById("bgMusic");
+        const musicBtn = document.getElementById("musicBtn");
+        const openHeart = document.getElementById("openHeart");
+
+        // Music button ON / OFF
+        musicBtn.addEventListener("click", async function (event) {
+            event.stopPropagation();
+
+            if (music.paused) {
+                try {
+                    await music.play();
+                    musicBtn.textContent = "🔊";
+                } catch (error) {
+                    console.log("Music playback failed:", error);
+                }
+            } else {
+                music.pause();
+                musicBtn.textContent = "🎵";
+            }
+        });
+
+        // Heart click: open common music player
+        openHeart.addEventListener("click", function () {
+            window.location.href = "music-player.html";
+        });
+    </script>
+
+</body>
+</html>

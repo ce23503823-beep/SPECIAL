@@ -1,0 +1,642 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #4b2946;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ffe2ef,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #eadcff,
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #fff6fa,
+            #f8edff,
+            #fff0f5
+        );
+
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+
+/* MAIN CONTAINER */
+.anniversary-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+    padding: 40px 25px 30px;
+
+    text-align: center;
+
+    z-index: 1;
+}
+
+
+/* TOP HEART */
+.top-heart {
+    color: #ed579c;
+    font-size: 35px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+.top-label {
+    margin-top: 8px;
+    margin-bottom: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    color: #a24782;
+}
+
+
+/* HEADER */
+.anniversary-header {
+    padding: 25px 15px 35px;
+}
+
+
+.anniversary-header h1 {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(42px, 7vw, 76px);
+
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    color: #b52f76;
+
+    text-shadow:
+        0 3px 12px rgba(219, 80, 150, 0.15);
+}
+
+
+.anniversary-header h2 {
+    margin-top: 5px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(27px, 5vw, 42px);
+
+    color: #53284f;
+}
+
+
+.heart-divider {
+    margin: 20px 0;
+
+    color: #dc589c;
+
+    font-size: 20px;
+
+    letter-spacing: 5px;
+}
+
+
+.header-message {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #674665;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* PHOTO SECTION */
+.photo-section {
+    width: 100%;
+
+    margin: 0 auto 45px;
+}
+
+
+.photo-frame {
+    position: relative;
+
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 2px solid rgba(231, 139, 190, 0.7);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 55px rgba(155, 73, 130, 0.18),
+        0 0 25px rgba(255, 153, 204, 0.12);
+
+    animation: photoAppear 1.2s ease both;
+}
+
+
+.anniversary-photo {
+    display: block;
+
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 19px;
+}
+
+
+/* HEART ON PHOTO */
+.photo-heart {
+    position: absolute;
+
+    right: -15px;
+    top: -20px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #ff70aa,
+        #d64fa3
+    );
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    box-shadow: 0 8px 20px rgba(214, 79, 163, 0.3);
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+.photo-caption {
+    margin-top: 18px;
+
+    color: #914878;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 32px;
+}
+
+
+/* LOVE LETTER */
+.love-letter {
+    position: relative;
+
+    max-width: 760px;
+
+    margin: 0 auto 45px;
+
+    padding: 40px 35px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 1px solid #f0c9e0;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 35px rgba(126, 64, 111, 0.09);
+
+    text-align: center;
+}
+
+
+.letter-decoration {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+
+.love-letter h2 {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 52px;
+
+    font-weight: 400;
+
+    color: #bd397e;
+
+    margin-bottom: 15px;
+}
+
+
+.small-divider {
+    margin-bottom: 25px;
+
+    color: #db579b;
+
+    font-size: 20px;
+
+    letter-spacing: 7px;
+}
+
+
+.love-letter p {
+    max-width: 620px;
+
+    margin: 0 auto 18px;
+
+    color: #54384f;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    font-weight: 400;
+}
+
+
+/* SIGNATURE */
+.signature {
+    margin-top: 30px !important;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 30px !important;
+
+    color: #a13d7b !important;
+}
+
+
+.signature span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 36px;
+}
+
+
+/* FOREVER SECTION */
+.forever-section {
+    max-width: 760px;
+
+    margin: 0 auto 35px;
+
+    padding: 35px 25px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 225, 240, 0.8),
+        rgba(241, 225, 255, 0.85)
+    );
+
+    border: 1px solid #edc5df;
+
+    border-radius: 25px;
+}
+
+
+.forever-hearts {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+
+.forever-section h2 {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 52px;
+
+    font-weight: 400;
+
+    color: #a93c81;
+
+    margin-bottom: 15px;
+}
+
+
+.forever-section p {
+    color: #60415c;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
+
+.forever-section .final-wish {
+    margin-top: 20px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #8c326d;
+}
+
+
+.final-heart {
+    margin-top: 20px;
+
+    color: #e65098;
+
+    font-size: 35px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+/* MUSIC BUTTON */
+.music-section {
+    margin: 25px auto;
+}
+
+
+#musicButton {
+    padding: 14px 27px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 50px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #e7549d,
+        #a65acb
+    );
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 22px rgba(194, 75, 151, 0.2);
+
+    transition: 0.3s ease;
+}
+
+
+#musicButton:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 28px rgba(194, 75, 151, 0.3);
+}
+
+
+/* FOOTER */
+footer {
+    padding: 20px 10px;
+
+    color: #a04b82;
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 28px;
+
+    text-align: center;
+}
+
+
+/* FLOATING HEARTS */
+.floating-hearts span {
+    position: fixed;
+
+    z-index: -1;
+
+    bottom: -50px;
+
+    color: #e879b0;
+
+    opacity: 0.35;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    animation: floatUp 12s linear infinite;
+}
+
+
+.floating-hearts span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+
+.floating-hearts span:nth-child(2) {
+    left: 18%;
+    animation-delay: 3s;
+}
+
+
+.floating-hearts span:nth-child(3) {
+    left: 32%;
+    animation-delay: 6s;
+}
+
+
+.floating-hearts span:nth-child(4) {
+    left: 46%;
+    animation-delay: 1s;
+}
+
+
+.floating-hearts span:nth-child(5) {
+    left: 60%;
+    animation-delay: 5s;
+}
+
+
+.floating-hearts span:nth-child(6) {
+    left: 73%;
+    animation-delay: 2s;
+}
+
+
+.floating-hearts span:nth-child(7) {
+    left: 86%;
+    animation-delay: 7s;
+}
+
+
+.floating-hearts span:nth-child(8) {
+    left: 95%;
+    animation-delay: 4s;
+}
+
+
+/* ANIMATIONS */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.35;
+    }
+
+    85% {
+        opacity: 0.35;
+    }
+
+    100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+@keyframes photoAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+
+    .anniversary-container {
+        padding: 25px 15px;
+    }
+
+    .top-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .anniversary-header {
+        padding: 20px 5px 28px;
+    }
+
+    .anniversary-header h1 {
+        font-size: 45px;
+    }
+
+    .anniversary-header h2 {
+        font-size: 29px;
+    }
+
+    .header-message {
+        font-size: 14px;
+    }
+
+    .photo-frame {
+        padding: 8px;
+        border-radius: 20px;
+    }
+
+    .anniversary-photo {
+        height: 360px;
+        border-radius: 14px;
+    }
+
+    .photo-caption {
+        font-size: 27px;
+    }
+
+    .love-letter {
+        padding: 30px 20px;
+    }
+
+    .love-letter h2 {
+        font-size: 43px;
+    }
+
+    .love-letter p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .signature {
+        font-size: 27px !important;
+    }
+
+    .forever-section {
+        padding: 28px 18px;
+    }
+
+    .forever-section h2 {
+        font-size: 43px;
+    }
+
+    .forever-section p {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 25px;
+    }
+}

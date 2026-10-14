@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Love Letter ❤️</title>
+
+    <link rel="stylesheet" href="../css/letter.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Music Button -->
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+    <!-- Floating Hearts -->
+    <div id="hearts"></div>
+
+    <!-- Main Wrapper -->
+    <div class="letter-wrapper">
+
+        <div class="paper-roll">
+
+            <div class="paper-top"></div>
+
+            <div class="letter-paper">
+
+                <div class="paper-decoration">❤️ ✨ ❤️</div>
+
+                <h1 class="anniversary-title">
+                    Happy 1st<br>
+                    Love Anniversary
+                    <span>🖤💗💗🖤</span>
+                </h1>
+
+                <div class="small-line">───── ♥ ─────</div>
+
+                <div class="subtitle">MY LOVE TEDDY 🧸 ❤️</div>
+
+                <div class="teddy">🧸 ❤️ 🧸</div>
+
+                <div class="letter-content">
+
+                    <h2 class="letter-heading">My Letter To You ❤️</h2>
+
+                    <div id="letterText">
+
+                        <p>Hii En Cute alagu Teddy ❤️🧸</p>
+
+                        <p>
+                            En life-la nee vandhadhukku apram, enakku neraya
+                            beautiful memories kidaichirukku. Un kooda pesura
+                            ovvoru moment-um, college-la nadantha chinna chinna
+                            memories-um enakku romba special. Unna paakumbodhu
+                            enakku varra happiness-um shy feeling-um words-la
+                            solla mudiyadhu da. Unkooda irukkumbodhu naan
+                            safe-ahvum comfortable-ahvum feel panren, nga. ❤️
+                        </p>
+
+                        <p>
+                            Nee enna choose pannadhu enakku romba special, Teddy.
+                            Un life-la naanum oru important person-ah irukkanum
+                            nu aasai paduren. Namma rendu perum sandhoshama
+                            irukkura moments mattum illaama, kashtama irukkura
+                            moments-layum orutharukku oruthar support-ah irukkanum.
+                        </p>
+
+                        <p>
+                            Enakku nee venum da, happy moments share pannavum,
+                            sad-ah irukkumbodhu manasu vittu pesavum, enna
+                            nadandhaalum en feelings-ah purinjukka try pannavum.
+                            Namma rendu perukkum misunderstandings vandhaalum,
+                            adha pesi solve panni, oruvarai oruvar purinjukittu
+                            munnaadi poganum. ❤️
+                        </p>
+
+                        <p>
+                            Namma love-ah yaar koodayum compare panna vendam.
+                            Namma relationship namakku special. Namma rendu perum
+                            serndhu namma life-la neraya achieve pannanum.
+                            Un dreams-ku naan support-ah irukkanum; en dreams-kum
+                            nee support-ah irukkanum. Oru naal namma rendu perum
+                            thirumbi indha memories-ah paathu happy-ah sirikkanum. 🥹❤️
+                        </p>
+
+                        <p>
+                            Teddy, naan perfect person illa da. Aana unna love
+                            panradhulayum, namma relationship-ah care
+                            panradhulayum ennala mudinja alavukku sincere-ah
+                            iruppen. Un feelings-ah purinjukka try pannuven;
+                            en feelings-um unakku puriyanum nu aasai paduren.
+                        </p>
+
+                        <p>
+                            Indha first anniversary namakku oru beautiful
+                            beginning-ah irukkanum. Innum neraya anniversaries,
+                            neraya memories, neraya happiness namma serndhu
+                            experience pannanum. Life-la enna problems vandhaalum,
+                            rendu perum open-ah pesi, mutual respect-oda serndhu
+                            face pannalaam. 💗
+                        </p>
+
+                        <p>
+                            Thank you for being a special part of my life,
+                            en kutty teddy. 🧸❤️ Un kooda irukkura chinna chinna
+                            moments kooda enakku priceless. Namma love story
+                            innum azhaga continue aaganum nu manasara aasai paduren.
+                        </p>
+
+                        <p>
+                            Once again, Happy 1st Love Anniversary, My Meow! 🖤💗
+                            I love you so much da, en kutty teddy.
+                        </p>
+
+                    </div>
+
+                    <div class="final-message">
+                        <p>Happy 1st Love Anniversary, My Love. ❤️</p>
+                        <p>I LOVE YOU SO MUCH TEDDY. ❤️</p>
+                    </div>
+
+                    <div class="love-text">I ❤️ U</div>
+
+                    <div class="flowers">🌹 🌸 🌺 💐 🌼 🌷 🌸 🌹</div>
+
+                    <div class="signature">
+                        <p>Forever Yours,</p>
+                        <h2>Cute Meoww ❤️</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="paper-bottom"></div>
+
+        </div>
+
+        <!-- Continue Button -->
+        <div class="btn-box">
+
+            <button onclick="nextPage()">
+                Continue To Our Little Love Quiz 💗
+            </button>
+
+            <p class="next-text">
+                One more little surprise awaits you, Meow 💕
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Music Button Script -->
+    <script>
+        function toggleMusic() {
+            // Music is controlled by the common parent player
+            window.parent.postMessage("toggleMusic", "*");
+        }
+
+        function nextPage() {
+            window.parent.postMessage("quiz", "*");
+        }
+    </script>
+
+    <!-- Existing Letter Animation Script -->
+    <script src="../js/letter.js"></script>
+
+</body>
+</html>

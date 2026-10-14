@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Love Quiz ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background:
+        radial-gradient(circle at top, #52245f, transparent 45%),
+        linear-gradient(135deg, #100819, #26102f, #100819);
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px 24px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    background: rgba(255,255,255,0.07);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+    backdrop-filter: blur(15px);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(38px, 8vw, 55px);
+    color: #ffb8dc;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #f2d8eb;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.question {
+    margin-bottom: 24px;
+    padding: 18px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.question h3 {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    color: #ffd5e9;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 9px 0;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+.option:hover {
+    background: rgba(255,143,199,0.15);
+    border-color: #ff8fc7;
+}
+
+.option input {
+    accent-color: #ff75b7;
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.main-button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff78b7, #b66aff);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255,120,183,0.3);
+}
+
+#result {
+    display: none;
+    text-align: center;
+    margin-top: 25px;
+    padding: 20px 10px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.06);
+}
+
+#percentage {
+    font-size: clamp(48px, 12vw, 75px);
+    font-weight: 700;
+    color: #ff9bcf;
+    text-shadow: 0 0 20px rgba(255,155,207,0.3);
+}
+
+#resultMessage {
+    margin: 10px 0 18px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #ffe5f2;
+}
+
+#continueButton {
+    display: none;
+}
+
+#retryButton {
+    display: none;
+    background: linear-gradient(135deg, #bd79ff, #ff78b7);
+}
+
+.heart {
+    color: #ff8fc7;
+}
+
+@media (max-width: 400px) {
+    .quiz-container {
+        padding: 23px 15px;
+    }
+
+    .question {
+        padding: 14px;
+    }
+
+    .question h3 {
+        font-size: 14px;
+    }
+
+    .option {
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+    <h1>How Well Do You Know Me? ❤️</h1>
+
+    <p class="subtitle">
+        Let's see how much you remember about us, Meow 🧸💗
+    </p>
+
+    <form id="quizForm">
+
+        <!-- QUESTION 1 -->
+        <div class="question">
+            <h3>1. When did we start talking? 💌</h3>
+
+            <label class="option">
+                <input type="radio" name="q1" value="a">
+                January 3
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="b">
+                May 5
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="c">
+                October 12
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="d">
+                November 14
+            </label>
+        </div>
+
+        <!-- QUESTION 2 -->
+        <div class="question">
+            <h3>2. What is our proposal date? 💖</h3>
+
+            <label class="option">
+                <input type="radio" name="q2" value="a">
+                October 14
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="b">
+                May 5
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="c">
+                December 26
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="d">
+                January 3
+            </label>
+        </div>
+
+        <!-- QUESTION 3 -->
+        <div class="question">
+            <h3>3. Which was our first movie together? 🎬</h3>
+
+            <label class="option">
+                <input type="radio" name="q3" value="a">
+                Remo
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="b">
+                Aan Paavam Polathathu
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="c">
+                Devi
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="d">
+                Joe
+            </label>
+        </div>
+
+        <!-- QUESTION 4 -->
+        <div class="question">
+            <h3>4. Entha song namma first time notes vechom ?🧸</h3>
+
+            <label class="option">
+                <input type="radio" name="q4" value="a">
+                Kaalangathaleyy maranji erukum 
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="b">
+                Arakiyeee
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="c">
+                Niyee Punjirichaley
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="d">
+                Photoshop panamaley filter onum podamaleyy
+            </label>
+        </div>
+
+        <!-- QUESTION 5 -->
+        <div class="question">
+            <h3>5. Na ungaluku first time kudutha gifts ena ? ♾️</h3>
+
+            <label class="option">
+                <input type="radio" name="q5" value="a">
+                Watch & ring
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="b">
+                Wallet & Kaapu
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="c">
+                Chain
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="d">
+                Keychain
+            </label>
+        </div>
+
+        <button type="submit" class="main-button">
+            Submit My Answers 💗
+        </button>
+
+    </form>
+
+    <!-- RESULT -->
+    <div id="result" aria-live="polite">
+
+        <div id="percentage">0%</div>
+
+        <p id="resultMessage"></p>
+
+        <button
+            type="button"
+            id="retryButton"
+            class="main-button">
+            Try Again Meow 🥺💗
+        </button>
+
+        <button
+            type="button"
+            id="continueButton"
+            class="main-button">
+            Continue To Our Surprise 💝
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+const quizForm = document.getElementById("quizForm");
+const result = document.getElementById("result");
+const percentage = document.getElementById("percentage");
+const resultMessage = document.getElementById("resultMessage");
+const retryButton = document.getElementById("retryButton");
+const continueButton = document.getElementById("continueButton");
+
+/*
+  IMPORTANT:
+  Q1, Q2 and Q3 answers need to match your real memories.
+  Q4 and Q5 are set according to the options below.
+*/
+const correctAnswers = {
+    q1: "c",
+    q2: "a",
+    q3: "b",
+    q4: "d",
+    q5: "b"
+};
+
+quizForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let score = 0;
+    let unanswered = false;
+
+    for (let question in correctAnswers) {
+        const selected = quizForm.querySelector(
+            'input[name="' + question + '"]:checked'
+        );
+
+        if (!selected) {
+            unanswered = true;
+        } else if (selected.value === correctAnswers[question]) {
+            score++;
+        }
+    }
+
+    if (unanswered) {
+        alert("Answer all 5 questions first, Meow ❤️");
+        return;
+    }
+
+    const percent = Math.round((score / 5) * 100);
+
+    percentage.textContent = percent + "%";
+    result.style.display = "block";
+
+    retryButton.style.display = "none";
+    continueButton.style.display = "none";
+
+    if (score === 5) {
+        resultMessage.innerHTML =
+            "Awww, you know me so well, Meow! 🥹❤️<br>" +
+            "You got all the answers correct!<br>" +
+            "Our memories are precious to me. 💗";
+
+        continueButton.style.display = "block";
+    } else {
+        resultMessage.innerHTML =
+            "It's okay, Meow! ❤️<br>" +
+            "You got " + score + " out of 5 answers correct.<br>" +
+            "Try once more and remember our little memories. 🧸";
+
+        retryButton.style.display = "block";
+    }
+
+    result.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+});
+
+retryButton.addEventListener("click", function() {
+    quizForm.reset();
+    result.style.display = "none";
+
+    quizForm.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+continueButton.addEventListener("click", function() {
+    /*
+      Parent music-player.html handles this message
+      and loads surprise.html without stopping music.
+    */
+    window.parent.postMessage("surprise", "*");
+});
+</script>
+
+</body>
+</html>

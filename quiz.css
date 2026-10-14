@@ -1,0 +1,222 @@
+/* ===== LOVE QUIZ BACKGROUND ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 35px 15px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #2b102f,
+        #542044,
+        #351747,
+        #1e1635
+    );
+    background-attachment: fixed;
+    color: #fff0f6;
+}
+
+/* ===== MAIN QUIZ CONTAINER ===== */
+.quiz-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background: rgba(255, 235, 245, 0.10);
+    border: 1px solid rgba(255, 192, 218, 0.25);
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(15px);
+}
+
+/* ===== MAIN HEADING ===== */
+h1 {
+    color: #ffb6d5;
+    text-align: center;
+    font-size: 38px;
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+}
+
+h2, h3 {
+    color: #ffc6df;
+}
+
+/* ===== INTRODUCTION ===== */
+.quiz-intro {
+    color: #ffe1ee;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+/* ===== PROGRESS TEXT ===== */
+.progress-text {
+    color: #ffd2e5;
+    font-weight: 600;
+    margin: 25px 0 10px;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff79b0, #ffcee3);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+/* ===== QUESTION CARDS ===== */
+.question-card {
+    background: rgba(255, 224, 239, 0.09);
+    border: 1px solid rgba(255, 182, 213, 0.30);
+    border-radius: 22px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.question-card:hover {
+    border-color: #ff8fbd;
+    transform: translateY(-2px);
+}
+
+/* ===== QUESTION NUMBER ===== */
+.question-number {
+    color: #ff9ec8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* ===== QUESTION TEXT ===== */
+.question-card h3,
+.question-card p {
+    color: #fff0f7;
+    line-height: 1.8;
+}
+
+/* ===== RADIO OPTIONS ===== */
+.option,
+.option label {
+    display: block;
+    color: #ffe5f0;
+    cursor: pointer;
+}
+
+.option {
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid rgba(255, 190, 220, 0.25);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.055);
+    transition: 0.3s ease;
+}
+
+.option:hover {
+    background: rgba(255, 133, 184, 0.15);
+    border-color: #ff9fc8;
+}
+
+.option input[type="radio"] {
+    accent-color: #ff78ad;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* ===== SELECTED OPTION ===== */
+.option:has(input[type="radio"]:checked) {
+    background: rgba(255, 105, 180, 0.18);
+    border-color: #ff8fbd;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+button,
+.submit-btn {
+    display: inline-block;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff79b0, #d94f91);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(217, 79, 145, 0.25);
+    transition: 0.3s ease;
+}
+
+button:hover,
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 105, 180, 0.35);
+}
+
+/* ===== RESULT SECTION ===== */
+.result-container,
+.result-box {
+    text-align: center;
+    color: #fff0f7;
+    background: rgba(255, 220, 238, 0.09);
+    border: 1px solid rgba(255, 182, 213, 0.3);
+    border-radius: 25px;
+    padding: 35px 20px;
+    margin-top: 30px;
+}
+
+/* ===== BIG PERCENTAGE ===== */
+.percentage,
+.score-percentage {
+    font-size: clamp(55px, 10vw, 90px);
+    font-weight: 800;
+    color: #ff9fc8;
+    text-shadow: 0 0 25px rgba(255, 105, 180, 0.35);
+    margin: 20px 0;
+}
+
+/* ===== RESULT MESSAGE ===== */
+.result-container p,
+.result-box p {
+    color: #ffe0ed;
+    line-height: 1.9;
+}
+
+/* ===== HEART DECORATION ===== */
+.heart {
+    color: #ff8fbd;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .quiz-container {
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .question-card {
+        padding: 18px 14px;
+    }
+
+    button,
+    .submit-btn {
+        max-width: 100%;
+        padding: 13px 22px;
+    }
+}
