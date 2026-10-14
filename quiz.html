@@ -424,13 +424,11 @@ retryButton.addEventListener("click", function() {
     });
 });
 
+
 continueButton.addEventListener("click", function() {
-    /*
-      Parent music-player.html handles this message
-      and loads surprise.html without stopping music.
-    */
-    window.parent.postMessage("surprise", "*");
+    window.location.href = "./surprise.html";
 });
+
 </script>
 
 </body>
