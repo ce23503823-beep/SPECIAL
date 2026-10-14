@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,12 +140,12 @@ h1 {
     color: #ffe5f2;
 }
 
-#continueButton {
+#continueButton,
+#retryButton {
     display: none;
 }
 
 #retryButton {
-    display: none;
     background: linear-gradient(135deg, #bd79ff, #ff78b7);
 }
 
@@ -184,7 +185,6 @@ h1 {
 
     <form id="quizForm">
 
-        <!-- QUESTION 1 -->
         <div class="question">
             <h3>1. When did we start talking? 💌</h3>
 
@@ -209,7 +209,6 @@ h1 {
             </label>
         </div>
 
-        <!-- QUESTION 2 -->
         <div class="question">
             <h3>2. What is our proposal date? 💖</h3>
 
@@ -234,7 +233,6 @@ h1 {
             </label>
         </div>
 
-        <!-- QUESTION 3 -->
         <div class="question">
             <h3>3. Which was our first movie together? 🎬</h3>
 
@@ -259,13 +257,12 @@ h1 {
             </label>
         </div>
 
-        <!-- QUESTION 4 -->
         <div class="question">
-            <h3>4. Entha song namma first time notes vechom ?🧸</h3>
+            <h3>4. Entha song namma first time notes vechom? 🧸</h3>
 
             <label class="option">
                 <input type="radio" name="q4" value="a">
-                Kaalangathaleyy maranji erukum 
+                Kaalangathaleyy maranji erukum
             </label>
 
             <label class="option">
@@ -284,18 +281,17 @@ h1 {
             </label>
         </div>
 
-        <!-- QUESTION 5 -->
         <div class="question">
-            <h3>5. Na ungaluku first time kudutha gifts ena ? ♾️</h3>
+            <h3>5. Na ungaluku first time kudutha gifts ena? ♾️</h3>
 
             <label class="option">
                 <input type="radio" name="q5" value="a">
-                Watch & ring
+                Watch &amp; ring
             </label>
 
             <label class="option">
                 <input type="radio" name="q5" value="b">
-                Wallet & Kaapu
+                Wallet &amp; Kaapu
             </label>
 
             <label class="option">
@@ -315,7 +311,6 @@ h1 {
 
     </form>
 
-    <!-- RESULT -->
     <div id="result" aria-live="polite">
 
         <div id="percentage">0%</div>
@@ -348,11 +343,6 @@ const resultMessage = document.getElementById("resultMessage");
 const retryButton = document.getElementById("retryButton");
 const continueButton = document.getElementById("continueButton");
 
-/*
-  IMPORTANT:
-  Q1, Q2 and Q3 answers need to match your real memories.
-  Q4 and Q5 are set according to the options below.
-*/
 const correctAnswers = {
     q1: "c",
     q2: "a",
@@ -367,7 +357,7 @@ quizForm.addEventListener("submit", function(event) {
     let score = 0;
     let unanswered = false;
 
-    for (let question in correctAnswers) {
+    for (const question in correctAnswers) {
         const selected = quizForm.querySelector(
             'input[name="' + question + '"]:checked'
         );
@@ -424,11 +414,9 @@ retryButton.addEventListener("click", function() {
     });
 });
 
-
 continueButton.addEventListener("click", function() {
     window.location.href = "./surprise.html";
 });
-
 </script>
 
 </body>
