@@ -178,12 +178,9 @@
          */
 
         // Optional music toggle message to the parent player.
-        function toggleMusic() {
-            window.parent.postMessage(
-                "toggleMusic",
-                window.location.origin
-            );
-        }
+       function toggleMusic() {
+    window.parent.postMessage("toggleMusic", "*");
+}
     </script>
 
 </body>
