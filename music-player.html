@@ -56,14 +56,10 @@
         <div id="status">Our Love ❤️</div>
     </div>
 
-    <audio id="bgMusic" loop preload="auto">
-        
-<source src="./Anbil%20Avan.mp3" type="audio/mpeg">
-
-    </audio>
-
+  <audio id="bgMusic" loop preload="auto">
+    <source src="./Anbil%20Avan.mp3" type="audio/mpeg">
+</audio>
     <iframe id="pageFrame" src="index.html"></iframe>
-
     <script>
         const music = document.getElementById("bgMusic");
         const musicButton = document.getElementById("musicButton");
@@ -95,17 +91,15 @@
 
             // Accept messages only from this same website.
     
+const pages = {
+    letter: "letter.html",
+    quiz: "quiz.html",
+    surprise: "surprise.html"
+};
 
-            const pages = {
-                letter: "letter.html",
-                quiz: "quiz.html",
-                surprise: "surprise.html"
-            };
-
-            if (typeof event.data !== "string") {
-                return;
-            }
-
+if (typeof event.data === "string" && pages[event.data]) {
+    pageFrame.src = pages[event.data];
+}
             if (pages[event.data]) {
                 pageFrame.src = pages[event.data];
             }
