@@ -164,9 +164,11 @@
         }
 
         
+
 function nextPage() {
-    window.location.href = "quiz.html";
+    window.parent.postMessage("quiz", "*");
 }
+
 
     </script>
 
